@@ -1,0 +1,538 @@
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "돋움", Dotum, Helvetica, "Apple SD Gothic Neo", Sans-serif;
+  font-size: 12px;
+}
+div {
+  display: block;
+}
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+body,
+button,
+dd,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+legend,
+li,
+menu,
+ol,
+p,
+select,
+table,
+td,
+textarea,
+th,
+ul {
+  margin: 0;
+  padding: 0;
+}
+fieldset,
+img {
+  border: 0;
+}
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+#header {
+  height: 55px;
+  position: relative;
+  z-index: 30;
+  background-color: #00c73c;
+  position: relative;
+  min-width: 800px;
+}
+#header h1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 156px;
+  height: 34px;
+  padding: 16px 0 0 19px;
+  z-index: 30;
+  overflow: hidden;
+}
+#header h1 a {
+  display: block;
+  float: left;
+}
+#header h1 .naver {
+  background-position: 0 -113px;
+  width: 58px;
+  height: 23px;
+  margin-right: 2px;
+}
+#header.h_mail .pwe_home {
+  background-position: -268px -86px;
+  width: 41px;
+  height: 23px;
+}
+#header h1 .naver,
+#header h1 .pwe_home,
+#header.h_mail .pwe_home {
+  background-image: url(https://ssl.pstatic.net/static/pwe/common/sp_pnb_d4f0e846.png);
+  background-size: 312px 256px;
+}
+.login_group {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+  z-index: 20;
+  white-space: nowrap;
+}
+#gnb {
+  position: relative;
+  z-index: 2147483646;
+  font-family: "나눔고딕", NanumGothic, "돋움", Dotum, "Apple SD Gothic Neo",
+    Helvetica, Sans-serif !important;
+  color: #444;
+  font-size: 12px;
+  letter-spacing: 0 !important;
+  line-height: normal !important;
+  text-align: left !important;
+}
+#gnb .blind {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  top: -1000em;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+}
+#gnb ul {
+  list-style: none;
+}
+.gnb_lst {
+  margin: 0;
+  padding: 0;
+  zoom: 1;
+}
+.gnb_login_li,
+.gnb_my_li,
+.gnb_notice_li,
+.mail_li,
+.gnb_service_li {
+  float: left;
+  margin-right: 2px;
+  overflow: visible;
+}
+.gnb_my_namebox {
+  padding: 2px 9px 0 0;
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  zoom: 1;
+}
+.gnb_my_namebox:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+a.gnb_my {
+  float: left;
+  display: block;
+  font-size: 12px;
+  vertical-align: middle;
+}
+a.gnb_my,
+.gnb_icon {
+  position: relative;
+}
+.gnb_login_li a,
+.gnb_my_li a,
+.gnb_notice_li a,
+.mail_li a,
+.gnb_service_li a {
+  position: relative;
+  z-index: 100;
+}
+a.gnb_my,
+.gnb_icon,
+#gnb .gnb_my_interface,
+.gnb_my_li .gnb_my_content .gnb_membership,
+#gnb .gnb_my_membership,
+#gnb .gnb_ico_num .gnb_ico_new,
+#gnb .gnb_ico_num .gnb_ico_new .gnb_count,
+.gnb_lst .ico_arrow,
+a.gnb_my .filter_mask,
+.gnb_my_lyr,
+.gnb_my_li .gnb_my_content .gnb_mask,
+.gnb_my_li .gnb_my_content .gnb_change,
+.gnb_my_li .gnb_my_content .gnb_edit_lst li,
+.gnb_my_li .gnb_my_content .gnb_pay_check em,
+#gnb .gnb_my_li .gnb_my_community a.gnb_pay span,
+.gnb_notice_li .gnb_notice_lyr,
+.gnb_notice_li .svc_list .gnb_ico_mail,
+.gnb_notice_li .svc_list .gnb_btn_remove span,
+.gnb_notice_li .svc_list .gnb_btn_remove i,
+.gnb_notice_li .gnb_error .gnb_ico_error,
+.gnb_ly_alert .gnb_btn_close i,
+.gnb_first_visit,
+.gnb_search_box,
+.gnb_search_box .gnb_del_txt,
+.gnb_svc_more .gnb_svc_lstwrp li.gnb_event em.ic_gnb_new,
+.gnb_svc_more .svc_btnwrp button {
+  background: url(https://ssl.pstatic.net/static/common/gnb/one/sp_gnb_v14.png)
+    no-repeat -999px -999px;
+  background: url(https://ssl.pstatic.net/static/common/gnb/one/sp_gnb_v15.png?v=2006)
+    no-repeat -999px -999px;
+  /* background: url(../img/sp_gnb_v15.png) no-repeat -999px -999px; */
+}
+a.gnb_my img {
+  vertical-align: top;
+  border-radius: 16px;
+}
+a.gnb_my .filter_mask {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  z-index: 1;
+  width: 28px;
+  height: 28px;
+  background-position: -260px -60px;
+}
+a.gnb_my .gnb_name {
+  margin-right: -1px;
+  padding-left: 5px;
+  display: inline-block;
+  height: 28px;
+  line-height: 28px;
+  vertical-align: top;
+  font-size: 11px;
+  color: #444;
+}
+.gnb_notice_li a.gnb_notice {
+  display: block;
+  width: 15px;
+  height: 17px;
+  padding: 7px 9px 4px;
+  text-decoration: none !important;
+}
+.gnb_service_li a.gnb_service .gnb_icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-position: -2px -130px;
+}
+.gnb_service_li a.gnb_service {
+  display: block;
+  width: 16px;
+  height: 16px;
+  padding: 7px 9px 5px;
+}
+.gnb_area {
+  position: relative;
+  height: 55px;
+  padding: 0 265px 0 176px;
+  background-repeat: repeat-x;
+  z-index: 10;
+  zoom: 1;
+}
+.gnb_area .gnb_list_box {
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 0;
+  zoom: 1;
+}
+.gnb_area .gnb_list_box:after {
+  clear: both;
+  display: block;
+  height: 0;
+  content: "";
+  visibility: hidden;
+}
+.gnb_area .gnb_list_box .gnb_first {
+  display: inline-block;
+  vertical-align: top;
+  *display: inline;
+  zoom: 1;
+  text-align: left;
+}
+.gnb_area .gnb_list_box ul li {
+  float: left;
+  width: 49px;
+  padding: 12px 0;
+  zoom: 1;
+  text-align: center;
+}
+.h_mail_lite .gnb_list_box .mail a,
+.h_mail .gnb_list_box .mail a {
+  background-position: -198px -140px;
+}
+.gnb_list_box .mail a {
+  background-position: -66px -140px;
+  z-index: 50;
+}
+.gnb_list_box .calendar a {
+  background-position: -33px -206px;
+  z-index: 45;
+}
+.gnb_list_box .memo a {
+  background-position: 0 -173px;
+  z-index: 40;
+}
+.gnb_list_box .contact a {
+  background-position: -33px -140px;
+  z-index: 35;
+}
+.gnb_list_box .ndrive a {
+  background-position: -66px -206px;
+  width: 26px;
+  height: 29px;
+  z-index: 30;
+}
+.gnb_list_box .office a {
+  background-position: -198px -173px;
+  z-index: 25;
+}
+.gnb_list_box .moneybook a {
+  background-position: -66px -173px;
+  z-index: 20;
+}
+.gnb_list_box li a {
+  background-position: -66px -140px;
+  width: 29px;
+  height: 29px;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  zoom: 1;
+}
+.gnb_area .gnb_list_box .gnb_last {
+  display: inline-block;
+  position: relative;
+  top: 20px;
+}
+.gnb_area .gnb_list_box .gnb_last .btn_more {
+  background-position: 0 -239px;
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+  margin-left: 15px;
+  vertical-align: middle;
+}
+#gnb a,
+#gnb a:visited,
+#gnb a:active,
+#gnb a:focus {
+  color: #444;
+}
+#gnb a,
+#gnb label,
+#gnb button {
+  cursor: pointer;
+}
+#gnb.gnb_one .gnb_login_li {
+  padding: 16px 21px 10px 1px;
+}
+#gnb.gnb_one .gnb_login_li,
+#gnb.gnb_one_small .gnb_login_li {
+  height: 28px;
+}
+#gnb.gnb_one .gnb_my_li {
+  padding: 12px 20px 12px 2px;
+}
+#gnb.gnb_one .gnb_login_li,
+#gnb.gnb_one_small .gnb_login_li,
+#gnb.gnb_one .gnb_my_li,
+#gnb.gnb_one_small .gnb_my_li,
+#gnb.gnb_one .gnb_notice_li,
+#gnb.gnb_one_small .gnb_notice_li,
+#gnb.gnb_one .mail_li,
+#gnb.gnb_one_small .mail_li,
+#gnb.gnb_one .gnb_service_li,
+#gnb.gnb_one_small .gnb_service_li {
+  margin-right: 0;
+  margin-left: 0;
+  background: url(https://ssl.pstatic.net/static/common/gnb/bg_one_line.png)
+    repeat-y right 0;
+}
+#gnb.gnb_one .gnb_my_li .gnb_my .gnb_name,
+#gnb.gnb_one_small .gnb_my_li .gnb_my .gnb_name {
+  margin: 0 0 0 1px;
+}
+#gnb.gnb_one .gnb_my_li .gnb_my .gnb_name,
+#gnb.gnb_one_small .gnb_my_li .gnb_my .gnb_name,
+#gnb.gnb_one .gnb_login_li .gnb_btn_login .gnb_txt,
+#gnb.gnb_one_small .gnb_login_li .gnb_btn_login .gnb_txt {
+  color: #fff;
+}
+#gnb.gnb_one .gnb_notice_li a.gnb_notice {
+  padding: 18px 19px 17px 19px;
+}
+#gnb.gnb_one .gnb_notice_li a.gnb_notice,
+#gnb.gnb_one_small .gnb_notice_li a.gnb_notice {
+  width: 17px;
+  height: 19px;
+}
+#gnb.gnb_one .gnb_notice_li a.gnb_notice .gnb_icon,
+#gnb.gnb_one_small .gnb_notice_li a.gnb_notice .gnb_icon {
+  width: 17px;
+  height: 19px;
+  background-position: -284px -119px;
+}
+.gnb_notice_li a.gnb_notice .gnb_icon {
+  display: block;
+  width: 15px;
+  height: 17px;
+  background-position: -3px -60px;
+}
+#gnb.gnb_one .gnb_service_li .gnb_service {
+  padding: 19px 19px 18px 19px;
+}
+#gnb.gnb_one .gnb_login_li a,
+#gnb.gnb_one_small .gnb_login_li a,
+#gnb.gnb_one .gnb_my_li a,
+#gnb.gnb_one_small .gnb_my_li a,
+#gnb.gnb_one .gnb_notice_li a,
+#gnb.gnb_one_small .gnb_notice_li a,
+#gnb.gnb_one .mail_li a,
+#gnb.gnb_one_small .mail_li a,
+#gnb.gnb_one .gnb_service_li a,
+#gnb.gnb_one_small .gnb_service_li a {
+  margin-right: 1px;
+}
+#gnb.gnb_one .gnb_service_li .gnb_service,
+#gnb.gnb_one_small .gnb_service_li .gnb_service {
+  width: 17px;
+  height: 17px;
+}
+#gnb.gnb_one .gnb_service_li .gnb_service .gnb_icon,
+#gnb.gnb_one_small .gnb_service_li .gnb_service .gnb_icon {
+  width: 17px;
+  height: 17px;
+  background-position: -324px -120px;
+}
+#header h1 .naver,
+#header h1 .pwe_home,
+#header.h_mail .pwe_home,
+#header.h_mail_lite .pwe_home,
+#header.h_calendar .pwe_home,
+#header.h_memo .pwe_home,
+#header.h_contact .pwe_home,
+#header.h_ndrive .pwe_home,
+#header.h_office .pwe_home,
+#header.h_moneybook .pwe_home,
+#header.h_noti .pwe_home,
+#header.h_myfeed .pwe_home,
+#header.h_bookmark .pwe_home,
+#header.h_keep .pwe_home,
+.gnb_list_box li a,
+.gnb_list_box .ndrive a,
+.gnb_area,
+.gnb_area .gnb_list_box .gnb_last .btn_more,
+.gnb_area .article_num em,
+.gnb_area .article_num .tail,
+.gnb_area span.icon_up em,
+.gnb_area span.icon_event_pnb em,
+.gnb_area span.icon_new em {
+  background-image: url(https://ssl.pstatic.net/static/pwe/common/sp_pnb_d4f0e846.png);
+  background-size: 312px 256px;
+}
+#gnb div,
+#gnb p,
+#gnb span,
+#gnb em,
+#gnb strong,
+#gnb h1,
+#gnb h2,
+#gnb h3,
+#gnb h4,
+#gnb h5,
+#gnb h6,
+#gnb ul,
+#gnb ol,
+#gnb li,
+#gnb dl,
+#gnb dt,
+#gnb dd,
+#gnb table,
+#gnb th,
+#gnb td,
+#gnb form,
+#gnb fieldset,
+#gnb legend,
+#gnb input,
+#gnb textarea,
+#gnb button,
+#gnb label {
+  font-family: "나눔고딕", NanumGothic, "돋움", Dotum, "Apple SD Gothic Neo",
+    Helvetica, Sans-serif !important;
+}
+#container {
+  margin-left: 251px;
+}
+div.mail {
+  background-color: yellow;
+  height: 100%;
+}
+.blind {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: 0;
+  background: 0 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+/*
+div{
+  display: block;
+}
+body, button, input, select, textarea {
+    font-family: '돋움',Dotum,Helvetica,'Apple SD Gothic Neo',Sans-serif;
+    font-size: 12px;
+}
+#wrap {
+    height: auto;
+    width: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    min-width: 0;
+    z-index: 1;
+}
+*/
