@@ -14,7 +14,10 @@ for q in 제목:
     if cnt < 2:
         cnt += 1
     else:
-        title.append(q.get_text())
+        if q.get_text()[-2] == ']':
+            title.append(q.get_text()[1:-5])
+        else:
+            title.append(q.get_text()[1:-2])
 print(title)
 # 글쓴이
 제목 = soup.find_all(class_="nickname")
