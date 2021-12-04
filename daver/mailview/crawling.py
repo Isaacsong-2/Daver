@@ -7,10 +7,14 @@ html = requests.get(url, headers=header)
 soup = bs(html.content, "html.parser")
 
 # 제목
+cnt = 0
 제목 = soup.find_all(class_="gall_tit ub-word")
 title = []
 for q in 제목:
-    title.append(q.get_text())
+    if cnt < 2:
+        cnt += 1
+    else:
+        title.append(q.get_text())
 print(title)
 # 글쓴이
 제목 = soup.find_all(class_="nickname")
@@ -38,3 +42,4 @@ for q in 조회수:
     else:
         count.append(q.get_text())
 print(count)
+print(len(title), len(writer), len(date), len(count))
