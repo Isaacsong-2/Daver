@@ -25,11 +25,21 @@ h1 {
 }
 body,
 h1,
-ul {
+ul,
+ol,
+li {
   margin: 0;
   padding: 0;
 }
-
+a,
+a:link {
+  text-decoration: none;
+  background-color: transparent;
+}
+ul,
+ol {
+  list-style: none;
+}
 #header {
   height: 55px;
   position: relative;
@@ -284,27 +294,205 @@ div.mail {
   width: 1268px;
   overflow: hidden;
 }
-.divList {
-  /* position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  overflow: hidden; */
+.unselectable {
   position: absolute;
-  top: 101px;
+  top: 200px;
   bottom: 0;
-  left: 0;
+  left: 251px;
   right: 0;
   min-height: 1px;
   overflow: auto;
   width: auto;
   z-index: 20;
-}
-.unselectable {
   -moz-user-focus: ignore;
   -moz-user-select: -moz-none;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.unselectable .listWrap {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  position: absolute;
+  top: 0;
+  bottom: 39px;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  overflow-y: scroll;
+  padding-left: 14px;
+}
+.mailList {
+  min-width: 600px !important;
+  width: 100%;
+  position: relative;
+  zoom: 1;
+  z-index: 10;
+}
+.mailList li {
+  border-bottom: 1px solid #f1f1f1;
+  background: #fff;
+  min-height: 21px;
+  padding: 5px 200px 5px 124px;
+  line-height: 18px;
+  position: relative;
+  zoom: 1;
+  vertical-align: top;
+  width: auto;
+}
+ol.mailList li {
+  border-color: #f4f4f4;
+  padding: 9px 230px 5px 117px;
+}
+.mailList .mInfo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  _padding-right: 315px;
+  _zoom: 1;
+}
+/* 체크박스 */
+.mailList ul.mInfo li {
+  position: relative;
+  float: left;
+  color: #666;
+  zoom: 1;
+  padding: 10px 5px 10px 0;
+  padding-top: 11px !important;
+  height: 100%;
+  background: url(https://ssl.pstatic.net/static/pwe/nm/b.gif);
+}
+/* 계정있는유저 여부 */
+.icoImportantOff {
+  background-image: url(https://ssl.pstatic.net/static/pwe/nm/sp_works_0cfb8a0b.png);
+  background-size: 535px 518px;
+  background-position: -503px -324px;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 15px;
+  display: inline-block;
+}
+/* 읽음여부 */
+.mailList .read .no {
+  background-image: url(https://ssl.pstatic.net/static/pwe/nm/sp_works_0cfb8a0b.png);
+  background-size: 535px 518px;
+  background-position: -441px -465px;
+  width: 22px;
+  height: 20px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  vertical-align: top;
+}
+.mailList div.mTitle,
+.sender_context div.mTitle {
+  padding-left: 141px;
+}
+.mailList .mTitle {
+  position: relative;
+  width: auto;
+  overflow: hidden;
+  line-height: 1.5;
+  padding: 0 0 0 121px;
+  zoom: 1;
+  cursor: pointer;
+}
+.mailList .mTitle .name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110px;
+  zoom: 1;
+  _top: -2px;
+}
+.mailList .mTitle .title {
+  padding: 0;
+  zoom: 1;
+  word-break: break-all;
+  color: #999;
+}
+.mailList .mTitle .subject a {
+  overflow: hidden;
+}
+.mailList .mTitle .icon_previewMail .preview {
+  background-image: url(https://ssl.pstatic.net/static/pwe/nm/sp_works_0cfb8a0b.png);
+  background-size: 535px 518px;
+  background-position: -480px -358px;
+  background-repeat: no-repeat;
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+}
+.mailList .mTitle .newWindow span {
+  position: relative;
+  background-image: url(https://ssl.pstatic.net/static/pwe/nm/sp_works_0cfb8a0b.png);
+  background-size: 535px 518px;
+  background-position: -480px -336px;
+  background-repeat: no-repeat;
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+}
+.mailList .mTitle .newWindow,
+.mailList .mTitle a.icon_previewMail {
+  display: inline-block;
+  line-height: 0;
+  vertical-align: middle;
+}
+ol.mailList .mInfo.split_cell {
+  left: auto;
+  right: 0;
+  width: auto;
+}
+.mailList .mInfo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  padding-right: 315px;
+  zoom: 1;
+}
+.hidesize ol.mailList .split_cell li.date {
+  right: 55px;
+}
+ol.mailList ul.mInfo.split_cell li {
+  padding-top: 8px !important;
+}
+ol.mailList .mInfo.split_cell li {
+  padding-right: 0 !important;
+}
+ol.mailList ul.mInfo .date {
+  right: 120px;
+}
+ol.mailList ul.mInfo .date,
+ol.mailList ul.mInfo .views {
+  font-family: tahoma, sans-serif;
+  color: #999;
+}
+.mailList .mInfo .date {
+  right: 90px;
+  width: 100px;
+  white-space: nowrap;
+  padding-right: 0;
+  text-align: right;
+}
+.mailList .mInfo .date,
+.mailList .mInfo .views {
+  position: absolute;
+  top: 0;
+}
+ol.mailList ul.mInfo .views {
+  right: 18px;
+}
+.mailList .mInfo .views {
+  right: 0;
+  width: 60px;
+  padding-right: 0;
+  white-space: nowrap;
+  text-align: right;
 }
