@@ -75,8 +75,29 @@
     </div>
   </div>
   <!-- 공갤글 -->
-  <div class="content">
-    
+  <div class="row mt-5">
+    <div class="col-12">
+        <table class="table table-light">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">상품명</th>
+                    <th scope="col">가격</th>
+                    <th scope="col">주문날짜</th>
+                </tr>
+            </thead>
+            <tbody >
+                {% for data in db %}
+                <tr>
+                    <th scope="row">{{ data.title}}</th>
+                    <td>{{ data.writer }}</td>
+                    <td>{{ data.date }}</td>
+                    <td>{{ data.count }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
   </div>
   <!-- 하단 -->
   <img class="bottom" src="{%static 'asdf.PNG' %}" alt="bottom" width = 100%>
