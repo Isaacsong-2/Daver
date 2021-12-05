@@ -284,3 +284,27 @@ div.mail {
   width: 1268px;
   overflow: hidden;
 }
+.divList {
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden; */
+  position: absolute;
+  top: 101px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 1px;
+  overflow: auto;
+  width: auto;
+  z-index: 20;
+}
+.unselectable {
+  -moz-user-focus: ignore;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

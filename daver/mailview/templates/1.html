@@ -75,6 +75,61 @@
     </div>
   </div>
   <!-- 공갤글 -->
+  <div class="div unselectable">
+    <div class="list_for_view" class="listWrap" style="top: 0px; font-size: 9pt;">
+      <ol class="mailList sender_context" style="min-width: 600px;">
+        {% for db in data %}
+          <li class="maillist">
+            <ul class="mInfo">
+              <li class=contents>
+                <!-- 장식용 체크박스 -->
+                <input type="checkbox" class="checkbox">
+                <!-- 계정있는유저 여부 -->
+                <li class="important_mail">
+                  <span mailsn="17322" class="spr icoImportant icoImportantOff"></span>
+                </li>
+                <!-- 읽음여부 -->
+                <li class="read">
+                  <a href="#" class="spr icoRead no _c1(mlCore|readMail|read_conversation|17322) _stopDefault" title="읽지않은 메일"></a>
+                </li>
+                <!-- 이미지, 영상 유무 -->
+                <li class="file">
+                  <span class="spr " style="cursor:default;" title=""></span>
+                </li>
+              </li>
+            </ul>
+            <div class="mTitle">
+              <div class="name _ccr(lst.from) ">
+                <a class="writer">{{db.writer}}</a>
+              </div>
+              <div class="title">
+                <a href="" class="title" draggable="true">
+                  <span class="" foldersn="" mailsn="17322">
+                    <span class="" foldersn="" mailsn="17322">
+                    </span>
+                    <strong class="" foldersn="" mailsn="17322">
+                      {{db.title}}  
+                    </strong>
+                  </span>
+                </a>
+                <a href="#" class="icon_previewMail" title="메일 내용 미리보기">
+                  <span class="preview"></span>
+                </a>
+                <a href="#" class="" title="새 창으로 메일 보기">
+                  <span class="spr"></span>
+                </a>
+              </div>
+            </div>
+            <ul class="mInfo split_cell">
+              <li class="date">{{ db.date }}</li>
+              <li class="views">{{ db.count }}</li>
+            </ul>
+          </li>
+        {% endfor %}
+      </ol>
+    </div>
+  </div>
+<!--   
   <div class="row mt-5">
     <div class="col-12">
         <table class="table table-light">
@@ -98,7 +153,7 @@
             </tbody>
         </table>
     </div>
-  </div>
+  </div> -->
   <!-- 하단 -->
   <img class="bottom" src="{%static 'asdf.PNG' %}" alt="bottom" width = 100%>
 </body>
