@@ -4,9 +4,9 @@ from .crawling import crawl
 
 
 def index(request):
-    db = crawl()
+    data = crawl()
     # writer = crawling.writer
     # date = crawling.date
     # count = crawling.count
-    print(db)
-    return render(request, '1.html', db)
+    print(data)
+    return render(request, '1.html', {'data': data})

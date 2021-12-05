@@ -53,10 +53,15 @@ def crawl():
             # db['count'] = q.get_text()
             count.append(q.get_text())
     # print(count)
-    db = {}
-    db['title'] = title
-    db['writer'] = writer
-    db['date'] = date
-    db['count'] = count
-    return db
+    data = []
+    for i in range(len(title)):
+        db = {}
+        db['title'] = title[i]
+        db['writer'] = writer[i]
+        db['date'] = date[i]
+        db['count'] = count[i]
+        data.append(db)
+    return data
+
+
 # print(len(title), len(writer), len(date), len(count))

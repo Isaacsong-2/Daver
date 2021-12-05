@@ -87,12 +87,12 @@
                 </tr>
             </thead>
             <tbody >
-                {% for data in db %}
+                {% for db in data %}
                 <tr>
-                    <th scope="row">{{ data.title}}</th>
-                    <td>{{ data.writer }}</td>
-                    <td>{{ data.date }}</td>
-                    <td>{{ data.count }}</td>
+                    <th scope="row">{{ db.title}}</th>
+                    <td>{{ db.writer }}</td>
+                    <td>{{ db.date }}</td>
+                    <td>{{ db.count }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
