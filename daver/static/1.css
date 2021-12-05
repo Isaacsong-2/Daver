@@ -355,6 +355,12 @@ ol.mailList li {
   _padding-right: 315px;
   _zoom: 1;
 }
+.mailList ul.mInfo li.read {
+  width: 23px;
+  padding-right: 6px;
+  padding-top: 10px !important;
+  height: auto;
+}
 /* 체크박스 */
 .mailList ul.mInfo li {
   position: relative;
@@ -377,15 +383,16 @@ ol.mailList li {
   display: inline-block;
 }
 /* 읽음여부 */
-.mailList .read .no {
+.no {
   background-image: url(https://ssl.pstatic.net/static/pwe/nm/sp_works_0cfb8a0b.png);
   background-size: 535px 518px;
   background-position: -441px -465px;
+  background-repeat: no-repeat;
   width: 22px;
   height: 20px;
-  background-repeat: no-repeat;
   cursor: pointer;
   vertical-align: top;
+  display: inline-block;
 }
 .mailList div.mTitle,
 .sender_context div.mTitle {
