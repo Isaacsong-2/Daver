@@ -42,7 +42,6 @@ def crawl():
     write_num = []
     for q in 글번호:
         write_num.append(q.get_text())
-    print(write_num)
     # db만들기
     k = len(title) - len(writer)  # 공지글 제외
     data = []
@@ -53,10 +52,10 @@ def crawl():
         db['date'] = date[i+k]
         db['count'] = count[i+k]
         db['id'] = str(int(write_num[k])-int(write_num[i+k]))
+        db['write_num'] = write_num[i+k]
         data.append(db)
     print(data)
-    print(write_num[-1])
-    return data
+    return data, write_num[k]
 
 
 # print(len(title), len(writer), len(date), len(count))

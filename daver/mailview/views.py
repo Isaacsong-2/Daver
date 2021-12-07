@@ -4,22 +4,26 @@ from .crawling import crawl
 from django.http import Http404
 from bs4 import BeautifulSoup as bs
 import requests
+from urllib.parse import ParseResult, urlparse, urlunparse
 
 
 def index(request):
-    data = crawl()
+    data = crawl()[0]
     return render(request, 'mail_main.html', {'data': data})
 
 
 def mail_detail(request, pk):
-    data = crawl()
-    print(len(data))
-    url = "https://m.dcinside.com/board/gongik_new/2329281"
+    data = crawl()[0]
+    num = int(data[pk]['write_num'])
+    url = ParseResult(scheme='https', netloc='gall.dcinside.com', path='/board/view/',
+                      params='', query='id=gongik_new&no=' + data[pk]['write_num'] + '&page=1', fragment='')
+    url = url.geturl()
+    # print(url)
     header = {'User-agent': '*'}
     html = requests.get(url, headers=header)
     soup = bs(html.content, "html.parser")
-    #글내용 = soup.find_all(class_="gall_tit ub-word")
-    # print(글내용)
+    글내용 = soup.find_all(class_="write_div")
+    print(글내용)
     if pk >= len(data):
         raise Http404('게시글을 찾을 수 없습니다')
     else:
