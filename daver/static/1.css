@@ -591,3 +591,8 @@ div.view_title dl dt .viewMoreOff {
   position: absolute;
   left: 0;
 }
+/* write할때 view_title의 style이 적용되면 이미지가 안나옴 */
+.view_title .write_div img {
+  max-width: 100%;
+  vertical-align: top;
+}
