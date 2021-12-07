@@ -14,7 +14,7 @@ def crawl():
     제목 = soup.find_all(class_="gall_tit ub-word")
     title = []
     for q in 제목:
-        if cnt < 2:
+        if cnt < 3:
             cnt += 1
         else:
             if q.get_text()[-2] == ']':

@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+{% load static %}
+<link rel="stylesheet" href="{% static '1.css' %}">
+<html lang="ko">
+<body class="ko_KR">
+  <div id="header" class="{=OPTION_CLASS} h_mail white">
+    <h1>
+      <a href="http://www.naver.com" class="naver">
+        <span class="blind">NAVER</span>
+      </a>
+      <a href="http://mail.naver.com" class="_svc_lnk pwe_home">
+        <span class="_header_tit blind">메일</span>
+      </a>
+    </h1>
+    <!--로그  -->
+    <div class="login_group">
+      <!-- gnb -->
+      <div id="gnb" class="gnb_one">
+        <strong class="blind">사용자링크</strong>
+        <ul class="gnb_lst" id="gnb_lst" style="display: block;">
+          <!-- 아이디 -->
+          <li class="gnb_my_li" id="gnb_my_layer" style="display: inline-block;">
+            <div class="gnb_my_namebox" id="gnb_my_namebox" style="background-image: url(&quot;https://ssl.pstatic.net/static/common/gnb/2014/ico_arrow_wh.gif&quot;);">
+              <a href="javascript:;" class="gnb_my" onclick="gnbUserLayer.clickToggle(); return false;">
+                <img id="gnb_profile_img" src="https://ssl.pstatic.net/static/common/myarea/myInfo.gif" onerror="this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAMAAAC5zwKfAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADNQTFRF8PDw5ubm+vr6+/v76enp+Pj47e3t5+fn9/f37Ozs9PT08vLy7+/v6urq9fX15OTk/f39pqwodgAAAQNJREFUeNrs11EOgyAMgOEWUAF19f6n3cMeplJHoSZbsv4H+DIWaCNsNwcGGmiggQZ+D/Q5reuasr8H9ID0CsHfALpA74JTgwPSPnRK0Ac6FrwOXOjcogIdlTkNuDDgogGRAVEBDsQ19IMzC879ILAgGNgAZhbMP3RttonxJs1Lgea/sDYcyreHXjW+oPUHVid2MWC1K+A0sqsDW7CksGmlCNZoFt9pIfjYgY8bwMMexUENQuOtqYCxfHtT7AddYodDcp0gIPEh9IBxous+nBuaTis4Nw/OSLVwloN+JEmjGJR5FyIDRpIWZeAoBkcZGMRgkIEkz0D7GjXQQAMN/GvwKcAAEGGHJh0mmaAAAAAASUVORK5CYII='" width="26" height="26" alt="내 프로필 이미지" style="display: inline-block;">
+                <span id="gnb_profile_filter_mask" class="filter_mask" style="display: inline-block;"></span>
+                <span class="gnb_name" id="gnb_name1">아이디</span>
+              </a>
+            </div>
+          </li>
+          <!-- 알림 -->
+          <li class="gnb_notice_li" id="gnb_notice_layer" style="display: inline-block;">
+            <a href="javascript:;" class="gnb_notice" onclick="gnbNaverMeLayer.clickToggle(); return false;">
+              <span class="gnb_icon"></span>
+            </a>
+          </li>
+          <!-- 메뉴 -->
+          <li class="gnb_service_li" id="gnb_service_layer" style="display: inline-block;">
+            <a href="javascript:;" class="gnb_service" onclick="gnbMoreLayer.clickToggle(); return false;">
+              <span class="gnb_icon"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="gnb_area">
+      <div class="gnb_list_box" id="gnb_list">
+        <div class="gnb_first">
+        <ul>
+          <li class="_mail mail" title="메일"><a title="메일" href="http://mail.naver.com" class="mail" accesskey="4"></a></li>
+          <li class="_calendar calendar" title="캘린더"><a title="캘린더" href="http://calendar.naver.com" class="calendar" accesskey=""></a></li>
+          <li class="_memo memo" title="메모"><a title="메모" href="http://memo.naver.com" class="memo" accesskey=""></a></li>
+          <li class="_contact contact" title="주소록"><a title="주소록" href="http://contact.naver.com" class="address" accesskey=""></a></li>
+          <li class="_ndrive ndrive" title="MYBOX"><a title="MYBOX" href="http://mybox.naver.com" class="ndrive" accesskey=""></a></li>
+          <li class="_office office" title="오피스"><a title="오피스" href="http://office.naver.com" class="office" accesskey=""></a></li>
+          <li class="_moneybook moneybook" title="가계부"><a title="가계부" href="http://moneybook.naver.com" class="moneybook" accesskey=""></a></li>
+        </ul>
+        </div>
+        <div class="gnb_last">
+        <a class="btn_more" title="메뉴 더보기" href="#"></a> 
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 창작 -->
+  <img class="left" src="{%static 'qwer.PNG' %}" alt="left" width = 251 style="float:left">
+  <div id="container">
+    <div class="middle">
+      <img class="right_up" src="{%static 'poiu.PNG' %}" alt="right_up">
+    
+    </div>
+    <div class="mail">
+    </div>
+  </div>
+  <!-- 글 내용 -->
+  <div class="entire">
+      <div class="view_title">
+          <h4 id="title_name">
+              {{ data.title }}
+          </h4>
+          <div class="date_cover">
+              <div class="date_detail">
+                  <p class="send_date">
+                      {{ data.date }}
+                  </p>
+              </div>
+              <span class="basis"></span>
+          </div>
+          <dl style="display">
+        </dl>
+      </div>
+  </div>
+  <!-- 하단 -->
+  <img class="bottom" src="{%static 'asdf.PNG' %}" alt="bottom" width = 100%>
+</body>
+</html>
