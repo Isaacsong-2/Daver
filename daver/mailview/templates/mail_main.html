@@ -13,11 +13,10 @@
         <span class="_header_tit blind">메일</span>
       </a>
     </h1>
-    <!--로그  -->
+    <!--로그인  -->
     <div class="login_group">
       <!-- gnb -->
       <div id="gnb" class="gnb_one">
-        <strong class="blind">사용자링크</strong>
         <ul class="gnb_lst" id="gnb_lst" style="display: block;">
           <!-- 아이디 -->
           <li class="gnb_my_li" id="gnb_my_layer" style="display: inline-block;">
@@ -103,8 +102,8 @@
                 <a class="writer">{{db.writer}}</a>
               </div>
               <div class="subject">
-                <a href="" class="title" draggable="true">
-                  <strong class="" foldersn="" mailsn="17322">
+                <a href="/mailview/{{ db.id }}" class="title" draggable="true">
+                  <strong>
                     {{db.title}}  
                   </strong>
                 </a> 
