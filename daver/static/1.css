@@ -516,8 +516,9 @@ ol.mailList ul.mInfo .views {
   border-bottom: 1px solid #e8e8e8;
   color: #000;
   width: auto;
-  _height: 1%;
-  overflow: hidden;
+  /* _height: 1%; */
+  height: 487px;
+  overflow: scroll;
   zoom: 1;
 }
 .view_title #title_name {
@@ -595,4 +596,12 @@ div.view_title dl dt .viewMoreOff {
 .view_title .write_div img {
   max-width: 100%;
   vertical-align: top;
+}
+img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  background: transparent;
+  font-style: normal;
 }
