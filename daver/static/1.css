@@ -323,6 +323,7 @@ div.mail {
   overflow: auto;
   overflow-y: scroll;
   padding-left: 14px;
+  height: 492px;
 }
 .mailList {
   min-width: 600px !important;
@@ -517,8 +518,9 @@ ol.mailList ul.mInfo .views {
   color: #000;
   width: auto;
   /* _height: 1%; */
-  height: 487px;
-  overflow: scroll;
+  /* height: 487px; */
+  height: 76.4px;
+  overflow: hidden;
   zoom: 1;
 }
 .view_title #title_name {
@@ -593,11 +595,20 @@ div.view_title dl dt .viewMoreOff {
   left: 0;
 }
 /* write할때 view_title의 style이 적용되면 이미지가 안나옴 */
-.view_title .write_div img {
+.crawl_contents {
   max-width: 100%;
+  /* width: 100%; */
+  height: 410.6px;
+  /* height: 100px; */
+  /* max-height: 100%; */
+  /* width: 100%; */
   vertical-align: top;
+  word-break: break-all;
+  line-height: 1.5;
+  overflow: scroll;
 }
-img {
+.crawl_contents img {
+  width: 850px;
   margin: 0;
   padding: 0;
   border: 0;
