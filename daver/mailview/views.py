@@ -8,12 +8,12 @@ from urllib.parse import ParseResult
 
 
 def mail(request):
-    data = crawl()[0]
+    data = crawl()
     return render(request, 'mail_main.html', {'data': data})
 
 
 def mail_detail(request, pk):
-    data = crawl()[0]
+    data = crawl()
     #data = saved().data
     url = ParseResult(scheme='https', netloc='gall.dcinside.com', path='/board/view/',
                       params='', query='id=gongik_new&no=' + data[pk]['write_num'] + '&page=1', fragment='')
