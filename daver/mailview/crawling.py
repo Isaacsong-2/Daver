@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup as bs
 import os
+from urllib.parse import ParseResult
 
 
 def crawl():
@@ -42,17 +43,6 @@ def crawl():
     write_num = []
     for q in 글번호:
         write_num.append(q.get_text())
-    # 이미지 여부
-    이미지 = soup.find_all(class_='gall_tit ub-word')
-    img = []
-    cnt = 0
-    for q in 이미지:
-        cnt += 1
-        print(q)
-        img.append(q)
-
-    print(cnt)
-    print(img)
     # print('1')
     # db만들기
     k = len(title) - len(writer)  # 공지글 제외
@@ -67,6 +57,21 @@ def crawl():
         db['write_num'] = write_num[i+k]
         data.append(db)
     # print(data)
+
+    # 이미지 여부
+    # 이미지 = soup.find_all(class_='gall_tit ub-word')
+    # img = []
+    # cnt = 0
+    # for q in 이미지:
+    #     cnt += 1
+    #     print(q)
+    #     img.append(q)
+
+    # print(cnt)
+    # print(img)
+    # url = ParseResult(scheme='https', netloc='gall.dcinside.com', path='/board/view/',
+    #                   params='', query='id=gongik_new&no=' + data[pk]['write_num'] + '&page=1', fragment='')
+    # url = url.geturl()
     return data
 
 # print(len(title), len(writer), len(date), len(count))

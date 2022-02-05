@@ -14,7 +14,7 @@ def mail(request):
 
 def mail_detail(request, pk):
     data = crawl()
-    #data = saved().data
+    # data = saved().data
     url = ParseResult(scheme='https', netloc='gall.dcinside.com', path='/board/view/',
                       params='', query='id=gongik_new&no=' + data[pk]['write_num'] + '&page=1', fragment='')
     url = url.geturl()  # url 생성
@@ -30,3 +30,6 @@ def mail_detail(request, pk):
     else:
         data = data[pk]
     return render(request, 'mail_detail.html', {'data': data})
+
+
+# mail(0)

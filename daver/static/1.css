@@ -608,7 +608,7 @@ div.view_title dl dt .viewMoreOff {
   overflow: scroll;
 }
 .crawl_contents img {
-  width: 850px;
+  width: auto;
   margin: 0;
   padding: 0;
   border: 0;
